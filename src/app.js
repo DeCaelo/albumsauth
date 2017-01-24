@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import firebase from 'firebase';
 import { Header, Button } from './components/common';
+import LoginForm from './components/LoginForm';
 
 class App extends Component {
   componentWillMount() {
@@ -12,12 +13,13 @@ class App extends Component {
       storageBucket: 'authentication-ce886.appspot.com',
       messagingSenderId: '229468524327'
     });
+}
 
   render() {
     return (
       <View>
         <Header headerText="Authentication" />
-        <Text>My App</Text>
+        <LoginForm />
       </View>
     );
   }
